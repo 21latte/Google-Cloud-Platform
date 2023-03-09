@@ -30,7 +30,7 @@ job_config = bigquery.LoadJobConfig(
     skip_leading_rows=1,
     source_format=bigquery.SourceFormat.CSV,
 )
-uri = 'gs://test_youngbeom/updated_csv_file.csv'
+uri = 'gs://<버킷명>/<경로>/<파일명>'
 
 load_job = client.load_table_from_uri(
     uri, table_id, job_config=job_config
